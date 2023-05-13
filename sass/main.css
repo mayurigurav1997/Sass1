@@ -21,6 +21,8 @@ html {
   color: #222f3e;
   letter-spacing: 0.3rem;
   font-size: 5rem;
+  text-transform: capitalize;
+  letter-spacing: 1.5rem;
 }
 .main_header h1:hover {
   color: #c8d6e5;
@@ -32,6 +34,7 @@ html {
   color: #222f3e;
   letter-spacing: 0.3rem;
   font-size: 5rem;
+  text-transform: capitalize;
 }
 .main_header p:hover {
   color: #c8d6e5;

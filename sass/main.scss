@@ -12,11 +12,12 @@ html {
 $bg-color: #10ac84;
 
 //4.mixin
-@mixin flexprobs {
+@mixin flexprobs($par1) {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    letter-spacing: $par1;
     // align-content: center;
 }
 
@@ -25,6 +26,7 @@ $bg-color: #10ac84;
     letter-spacing: 0.3rem;
     //1. operators
     font-size: 15rem - 10rem;
+    text-transform: capitalize;
 }
 
 .main_header {
@@ -34,7 +36,8 @@ $bg-color: #10ac84;
     background: $bg-color;
 
     h1 {
-        @include text;
+        //parameter
+        @include text(1.5rem);
 
         &:hover {
             color: #c8d6e5;
@@ -47,7 +50,7 @@ $bg-color: #10ac84;
     }
 
     p {
-        @include text;
+        @include text(0.5rem);
 
         &:hover {
             color: #c8d6e5;
