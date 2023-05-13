@@ -1,0 +1,17 @@
+//4.mixin
+@mixin flexprobs($par1) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: $par1;
+    // align-content: center;
+}
+
+@mixin text {
+    color: #222f3e;
+    letter-spacing: 0.3rem;
+    //1. operators
+    font-size: 15rem - 10rem;
+    text-transform: capitalize;
+}
