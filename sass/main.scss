@@ -11,25 +11,46 @@ html {
 //2. variable
 $bg-color: #10ac84;
 
-.main_header {
-    width: 100vw;
-    height: 100vh;
+//4.mixin
+@mixin flexprobs {
     display: flex;
     flex-direction: column;
-    place-items: center;
-    justify-items: center;
+    justify-content: center;
     align-items: center;
+    // align-content: center;
+}
+
+@mixin text {
+    color: #222f3e;
+    letter-spacing: 0.3rem;
+    //1. operators
+    font-size: 15rem - 10rem;
+}
+
+.main_header {
+    @include flexprobs;
+    width: 100vw;
+    height: 100vh;
     background: $bg-color;
 
     h1 {
-        color: #222f3e;
-        //1. operators
-        font-size: 5rem + 5rem;
+        @include text;
+
+        &:hover {
+            color: #c8d6e5;
+        }
+
+        //3.nesting
+        &::after {
+            content: "Channel"
+        }
     }
 
     p {
-        color: #222f3e;
-        //1. operators
-        font-size: 5rem + 5rem;
+        @include text;
+
+        &:hover {
+            color: #c8d6e5;
+        }
     }
 }
